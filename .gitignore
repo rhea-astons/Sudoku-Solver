@@ -1,0 +1,4 @@
+sudokus/
+sudokus/*
+*.o
+solver
