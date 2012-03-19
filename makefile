@@ -1,4 +1,4 @@
-all: solver
+all: solver remove_o-files
 
 fichier.o:	fichier.c fichier.h
 	gcc -c fichier.c
@@ -15,5 +15,8 @@ solvermain.o: solvermain.c
 solver: solvermain.o pile.o fichier.o jeu.o
 	gcc -o solver solvermain.o pile.o fichier.o jeu.o
 
+remove_o-files:
+	rm *.o
+
 clean:
-	rm *.o solver
+	rm solver
